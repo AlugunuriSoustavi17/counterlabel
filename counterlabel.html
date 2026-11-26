@@ -1,0 +1,68 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>counterlabel</title>
+</head>
+<body>
+    <label id="counterlabel">0</label>
+    <div id="btncontainer">
+        <button id="increasebtn" class ="button">increase</button>
+        <button id="decreasebtn" class ="button">decrease</button>
+        <button id="resetbtn" class ="button">reset</button>
+    </div>
+
+    <style>
+.button{
+padding: 10px;
+border: 2px;
+color: white;
+background-color: rgb(43, 226, 104);
+border-radius: 2px;
+transition:background-color0.25s;
+cursor:pointer;
+}
+
+#counterlabel{
+    font-size: medium;
+    text-align: center;
+    display: block;
+
+
+
+}
+
+
+#btncontainer{
+    text-align: center;
+}
+
+
+    </style>
+    <script>
+const decreasebtn=document.getElementById("decreasebtn");
+const increasebtn=document.getElementById("increasebtn");
+const resetbtn=document.getElementById("resetbtn");
+const counterlabel=document.getElementById("counterlabel");
+let count=0;
+increasebtn.onclick=function(){
+    count++;
+    counterlabel.textContent=count;
+}
+decreasebtn.onclick=function(){
+    count--;
+    counterlabel.textContent=count;
+}
+resetbtn.onclick=function(){
+    count=0;
+   counterlabel.textContentd=count;
+}
+
+
+
+
+
+
+    </script>
+</body>
+</html>
